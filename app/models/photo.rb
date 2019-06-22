@@ -48,7 +48,8 @@ class Photo
               "date" => result["date"],
               "camera" => result["camera"],
               "description" => result["description"],
-              "photo_id" => result["photo_id"].to_i
+              "photo_id" => result["photo_id"].to_i,
+              "photo_url" => result["photo_url"]
             }
         end
     end
@@ -58,9 +59,10 @@ class Photo
                 UPDATE photos
                 SET type='#{opts["type"]}', iso='#{opts["iso"]}', film='#{opts["film"]}', aperture='#{opts["aperture"]}', shutter='#{opts["shutter"]}',
                   camera='#{opts["camera"]}',
-                  description='#{opts["description"]}'
+                  description='#{opts["description"]}',
+                  photo_url='#{opts["photo_url"]}'
                 WHERE photo_id=#{id}
-                RETURNING type, iso, film, aperture, shutter, latitude, longitude, date, camera, description, photo_id;
+                RETURNING type, iso, film, aperture, shutter, latitude, longitude, date, camera, description, photo_id, photo_url;
             SQL
         )
         return {
@@ -74,7 +76,8 @@ class Photo
           "date" => results.first["date"],
           "camera" => results.first["camera"],
           "description" => results.first["description"],
-          "photo_id" => results.first["photo_id"]
+          "photo_id" => results.first["photo_id"],
+          "photo_url" => results.first["photo_url"]
 
         }
     end
