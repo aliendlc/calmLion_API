@@ -52,7 +52,7 @@ class Photo
             }
         end
     end
-    def self.update(id, opts)
+    def self.update(opts, id)
         results = DB.exec(
             <<-SQL
                 UPDATE photos

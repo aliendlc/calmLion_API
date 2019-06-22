@@ -3244,3 +3244,127 @@ Processing by PhotosController#index as */*
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/photos" for ::1 at 2019-06-22 08:39:39 -0500
+Processing by PhotosController#create as HTML
+  Parameters: {"type"=>"B & W", "iso"=>"500", "film"=>"Nepal", "aperture"=>"11", "shutter"=>"1/4", "modalVisible"=>false, "latitude"=>37.785834, "longitude"=>-122.406417, "date"=>"22/5/2019  8:39", "camera"=>"Mamiya", "description"=>"Mountains", "success"=>false, "photo"=>{"type"=>"B & W", "iso"=>"500", "film"=>"Nepal", "aperture"=>"11", "shutter"=>"1/4", "modalVisible"=>false, "latitude"=>37.785834, "longitude"=>-122.406417, "date"=>"22/5/2019  8:39", "camera"=>"Mamiya", "description"=>"Mountains", "success"=>false}}
+Completed 200 OK in 21ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/photos" for ::1 at 2019-06-22 08:39:39 -0500
+Processing by PhotosController#index as */*
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/photos" for ::1 at 2019-06-22 08:39:52 -0500
+Processing by PhotosController#index as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/photos/43" for ::1 at 2019-06-22 08:40:25 -0500
+Processing by PhotosController#update as HTML
+  Parameters: {"type"=>"B & W", "iso"=>"500", "film"=>"Nepal", "aperture"=>"11", "shutter"=>"1/4", "camera"=>"Nikon", "description"=>"Beach", "photo_id"=>43, "photo"=>{}, "modalVisible"=>false, "id"=>"43"}
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/photos" for ::1 at 2019-06-22 08:40:28 -0500
+Processing by PhotosController#index as */*
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/photos" for ::1 at 2019-06-22 08:45:47 -0500
+Processing by PhotosController#index as */*
+  Parameters: {"date"=>"06/06/19", "brand"=>"White Elephant", "origin"=>"California", "location"=>"Alaska", "rating"=>6, "favorite"=>true, "flavors"=>"hops, watermelon, mint", "photo"=>{"date"=>"06/06/19", "brand"=>"White Elephant", "origin"=>"California", "location"=>"Alaska", "rating"=>6, "favorite"=>true, "flavors"=>"hops, watermelon, mint"}}
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/photos/id" for ::1 at 2019-06-22 08:47:31 -0500
+Processing by PhotosController#update as */*
+  Parameters: {"date"=>"06/06/19", "brand"=>"White Elephant", "origin"=>"California", "location"=>"Alaska", "rating"=>6, "favorite"=>true, "flavors"=>"hops, watermelon, mint", "id"=>"id", "photo"=>{"date"=>"06/06/19", "brand"=>"White Elephant", "origin"=>"California", "location"=>"Alaska", "rating"=>6, "favorite"=>true, "flavors"=>"hops, watermelon, mint"}}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+PG::UndefinedColumn (ERROR:  column "id" does not exist
+LINE 5:                 WHERE photo_id=id
+                                       ^
+):
+  
+app/models/photo.rb:56:in `async_exec'
+app/models/photo.rb:56:in `update'
+app/controllers/photos_controller.rb:10:in `update'
+Started POST "/photos" for ::1 at 2019-06-22 08:53:33 -0500
+Processing by PhotosController#create as HTML
+  Parameters: {"type"=>"B & W", "iso"=>"50", "film"=>"Mexico", "aperture"=>"13", "shutter"=>"1/2.5", "modalVisible"=>false, "latitude"=>37.785834, "longitude"=>-122.406417, "date"=>"22/5/2019  8:52", "camera"=>"Nikon", "description"=>"Blah Blah", "success"=>false, "photo"=>{"type"=>"B & W", "iso"=>"50", "film"=>"Mexico", "aperture"=>"13", "shutter"=>"1/2.5", "modalVisible"=>false, "latitude"=>37.785834, "longitude"=>-122.406417, "date"=>"22/5/2019  8:52", "camera"=>"Nikon", "description"=>"Blah Blah", "success"=>false}}
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/photos" for ::1 at 2019-06-22 08:53:33 -0500
+Processing by PhotosController#index as */*
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/photos" for ::1 at 2019-06-22 08:53:39 -0500
+Processing by PhotosController#index as */*
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/photos/null" for ::1 at 2019-06-22 08:54:07 -0500
+Processing by PhotosController#update as HTML
+  Parameters: {"type"=>"color", "iso"=>"320", "film"=>"lkjalkj", "aperture"=>"2.8", "shutter"=>"1/2.5", "camera"=>"dkslfkj", "description"=>"OTHER", "photo_id"=>nil, "photo"=>{}, "modalVisible"=>false, "id"=>"null"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/models/photo.rb:67:in `update'
+app/controllers/photos_controller.rb:10:in `update'
+Started GET "/photos" for ::1 at 2019-06-22 09:00:45 -0500
+Processing by PhotosController#index as */*
+Completed 200 OK in 23ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/photos" for ::1 at 2019-06-22 09:00:46 -0500
+Processing by PhotosController#index as */*
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/photos/null" for ::1 at 2019-06-22 09:00:58 -0500
+Processing by PhotosController#update as HTML
+  Parameters: {"type"=>"", "iso"=>"", "film"=>"", "aperture"=>"", "shutter"=>"", "camera"=>"", "description"=>"Delilah ", "photo_id"=>nil, "photo"=>{}, "modalVisible"=>false, "id"=>"null"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/models/photo.rb:67:in `update'
+app/controllers/photos_controller.rb:10:in `update'
+Started POST "/photos" for ::1 at 2019-06-22 09:02:58 -0500
+Processing by PhotosController#create as HTML
+  Parameters: {"type"=>"", "iso"=>"", "film"=>"adfsdf", "aperture"=>"", "shutter"=>"", "modalVisible"=>false, "latitude"=>37.785834, "longitude"=>-122.406417, "date"=>"22/5/2019  9:2", "camera"=>"sdf", "description"=>"asdfasdf", "success"=>false, "photo"=>{"type"=>"", "iso"=>"", "film"=>"adfsdf", "aperture"=>"", "shutter"=>"", "modalVisible"=>false, "latitude"=>37.785834, "longitude"=>-122.406417, "date"=>"22/5/2019  9:2", "camera"=>"sdf", "description"=>"asdfasdf", "success"=>false}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+PG::UnableToSend (server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+):
+  
+app/models/photo.rb:11:in `async_exec'
+app/models/photo.rb:11:in `create'
+app/controllers/photos_controller.rb:4:in `create'
+Started POST "/photos" for ::1 at 2019-06-22 09:05:02 -0500
+Processing by PhotosController#create as HTML
+  Parameters: {"type"=>"", "iso"=>"", "film"=>"sdfsdd", "aperture"=>"", "shutter"=>"", "modalVisible"=>false, "latitude"=>37.785834, "longitude"=>-122.406417, "date"=>"22/5/2019  9:4", "camera"=>"", "description"=>"fasdf", "success"=>false, "photo"=>{"type"=>"", "iso"=>"", "film"=>"sdfsdd", "aperture"=>"", "shutter"=>"", "modalVisible"=>false, "latitude"=>37.785834, "longitude"=>-122.406417, "date"=>"22/5/2019  9:4", "camera"=>"", "description"=>"fasdf", "success"=>false}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+PG::UnableToSend (no connection to the server
+):
+  
+app/models/photo.rb:11:in `async_exec'
+app/models/photo.rb:11:in `create'
+app/controllers/photos_controller.rb:4:in `create'
